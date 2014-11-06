@@ -8924,7 +8924,8 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   font-size: 1.32em;
   font-weight: 600;
   margin: 0;
-  color: #333333; }
+  color: #333333;
+  max-width: 70%; }
 .item h2 {
   font-size: 1.7em;
   float: right;
@@ -8942,7 +8943,7 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   font-style: italic;
   font-weight: 400; }
 .item h3 {
-  top: 5px;
+  top: 4px;
   color: #ef4e3a; }
 .item p {
   font-size: 0.91em;
@@ -8967,3 +8968,13 @@ h1, h2, h3, h4, h5, h6, em, p {
 
 .item-textarea {
   width: 60%; }
+
+form {
+  font-family: lato; }
+  form input {
+    font-family: lato; }
+
+.btn-plus {
+  width: 34px;
+  position: relative;
+  top: 4px; }

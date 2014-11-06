@@ -12,16 +12,10 @@ angular.module('ionicApp', ['ionic'])
     };
 
     $scope.contacts = [{ 
-      title: 'Car Money',
-      fullName: 'Gordon Freeman',
-      dollarAmount: '15',
-      description: 'Dropped Gordo home from town.'
-    },
-    { 
-      title: 'Drug Money',
-      fullName: 'Isaac Shoeman',
-      dollarAmount: '30',
-      description: 'So many drugs in his pocket that I need.'
+      title: 'You Owe Me Now',
+      fullName: 'Cameron Bourke',
+      dollarAmount: '2',
+      description: 'You owe me $2 for downloading this app. Only kidding!! This is just an example of a "Theyo". Delete me now by swiping to the left and enjoy.'
     }];
 
     $ionicModal.fromTemplateUrl('templates/addTheyo.html', {
@@ -30,13 +24,15 @@ angular.module('ionicApp', ['ionic'])
       $scope.modal = modal;
     });
 
-    $scope.createContact = function(u) {    
-      $scope.newItem = { fullName: u.fullName,
+    $scope.createContact = function(u) {     
+      $scope.contacts.push({ fullName: u.fullName,
                              title: u.title,
                              dollarAmount: u.dollarAmount,
-                             description: u.description };    
-      $scope.contacts.push($scope.newItem);
-      $scope.newItem = '';
+                             description: u.description });
+      u.fullName = '';
+      u.title = '';
+      u.dollarAmount = '';
+      u.description = '';
       $scope.modal.hide();
     };
 
