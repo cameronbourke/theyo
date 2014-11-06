@@ -1,0 +1,28 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-dark">
+    <h1 class="title">New Theyo</h1>
+    <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Title</span>
+        <input ng-model="newUser.title" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Their Name</span>
+        <input ng-model="newUser.fullName" type="text">
+      </label>
+      <div class="item item-divider item-divider-margin">Optional</div>
+      <label class="item item-input item-input">
+        <span class="input-label">Amount $</span>
+        <input ng-model="newUser.dollarAmount" type="text">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Description</span>
+        <input class="item-textarea" type="text" ng-model="newUser.description">
+      </label>
+      <button class="button button-full button-assertive" style="margin-top: 20px" ng-click="createContact(newUser)">Add to the List</button>
+    </div>
+  </ion-content>
+</ion-modal-view>
