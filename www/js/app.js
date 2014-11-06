@@ -30,12 +30,14 @@ angular.module('ionicApp', ['ionic'])
       $scope.modal = modal;
     });
 
-    $scope.createContact = function(u) {        
-      $scope.contacts.push({ fullName: u.fullName,
+    $scope.createContact = function(u) {    
+      $scope.newItem = { fullName: u.fullName,
                              title: u.title,
                              dollarAmount: u.dollarAmount,
-                             description: u.description });
+                             description: u.description };    
+      $scope.contacts.push($scope.newItem);
+      $scope.newItem = '';
       $scope.modal.hide();
     };
 
-  });
+  });      

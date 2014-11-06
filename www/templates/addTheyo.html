@@ -4,25 +4,27 @@
     <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
   </ion-header-bar>
   <ion-content class="padding">
-    <div class="list">
-      <label class="item item-input">
-        <span class="input-label">Title</span>
-        <input ng-model="newUser.title" type="text" placeholder="What do they owe?">
-      </label>
-      <label class="item item-input">
-        <span class="input-label">Name</span>
-        <input ng-model="newUser.fullName" type="text" placeholder="Who owes you?">
-      </label>
-      <div class="item item-divider item-divider-margin">Optional</div>
-      <label class="item item-input item-input">
-        <span class="input-label">Amount</span>
-        <input ng-model="newUser.dollarAmount" type="text" placeholder="How much in dollars?">
-      </label>
-      <label class="item item-input">
-        <span class="input-label">Description</span>
-        <input class="item-textarea" type="text" ng-model="newUser.description" placeholder="Add more detail...">
-      </label>
-      <button class="button button-full button-assertive" style="margin-top: 20px" ng-click="createContact(newUser)">Add to the List</button>
-    </div>
+    <form ng-submit="createContact(newUser)">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Title</span>
+          <input ng-model="newUser.title" type="text" placeholder="What do they owe?">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input ng-model="newUser.fullName" type="text" placeholder="Who owes you?">
+        </label>
+        <div class="item item-divider item-divider-margin">Optional</div>
+        <label class="item item-input item-input">
+          <span class="input-label">Amount</span>
+          <input ng-model="newUser.dollarAmount" type="text" placeholder="How much in dollars?">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Description</span>
+          <textarea class="item-textarea" placeholder="Add more detail" rows="1" ng-model="newUser.description"></textarea>
+        </label>
+        <button class="button button-full button-assertive" style="margin-top: 20px" ng-click="createContact(newUser)">Create</button>
+      </div>
+    </form>
   </ion-content>
 </ion-modal-view>

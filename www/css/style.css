@@ -8948,7 +8948,9 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
   font-size: 0.91em;
   font-family: lato;
   font-weight: 400;
-  margin-top: 8px; }
+  margin-top: 8px;
+  overflow: visible;
+  white-space: normal; }
   .item p::before {
     content: url(../img/quote.svg);
     opacity: 0.6;
@@ -8962,3 +8964,6 @@ h1, h2, h3, h4, h5, h6, em, p {
 
 .item-complex .item-content {
   padding: 16px; }
+
+.item-textarea {
+  width: 60%; }
