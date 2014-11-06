@@ -7,20 +7,20 @@
     <div class="list">
       <label class="item item-input">
         <span class="input-label">Title</span>
-        <input ng-model="newUser.title" type="text">
+        <input ng-model="newUser.title" type="text" placeholder="What do they owe?">
       </label>
       <label class="item item-input">
-        <span class="input-label">Their Name</span>
-        <input ng-model="newUser.fullName" type="text">
+        <span class="input-label">Name</span>
+        <input ng-model="newUser.fullName" type="text" placeholder="Who owes you?">
       </label>
       <div class="item item-divider item-divider-margin">Optional</div>
       <label class="item item-input item-input">
-        <span class="input-label">Amount $</span>
-        <input ng-model="newUser.dollarAmount" type="text">
+        <span class="input-label">Amount</span>
+        <input ng-model="newUser.dollarAmount" type="text" placeholder="How much in dollars?">
       </label>
       <label class="item item-input">
         <span class="input-label">Description</span>
-        <input class="item-textarea" type="text" ng-model="newUser.description">
+        <input class="item-textarea" type="text" ng-model="newUser.description" placeholder="Add more detail...">
       </label>
       <button class="button button-full button-assertive" style="margin-top: 20px" ng-click="createContact(newUser)">Add to the List</button>
     </div>

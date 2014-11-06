@@ -34,12 +34,15 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item ng-repeat="contact in contacts">
+        <ion-item ng-repeat="contact in contacts" item="item">
           <h1>{{contact.title}}</h1>
           <em>from</em>
           <h3>{{contact.fullName}}</h3>
           <h2 ng-show="contact.dollarAmount">${{contact.dollarAmount}}</h2>
           <p ng-show="contact.description">{{contact.description}}</p>
+          <ion-option-button class="button-assertive" ng-click="onItemDelete(item)">
+            Delete
+          </ion-option-button>
         </ion-item>
       </ion-list>
     </ion-content>

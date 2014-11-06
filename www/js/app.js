@@ -7,6 +7,10 @@ angular.module('ionicApp', ['ionic'])
 
   .controller('AppCtrl', function($scope, $ionicModal) {
 
+    $scope.onItemDelete = function(item) {
+      $scope.contacts.splice($scope.contacts.indexOf(item), 1);
+    };
+
     $scope.contacts = [{ 
       title: 'Car Money',
       fullName: 'Gordon Freeman',
@@ -27,10 +31,10 @@ angular.module('ionicApp', ['ionic'])
     });
 
     $scope.createContact = function(u) {        
-      $scope.contacts.push({ fullName: u.fullName },
-                           { title: u.title },
-                           { dollarAmount: u.dollarAmount },
-                           { description: u.description });
+      $scope.contacts.push({ fullName: u.fullName,
+                             title: u.title,
+                             dollarAmount: u.dollarAmount,
+                             description: u.description });
       $scope.modal.hide();
     };
 
