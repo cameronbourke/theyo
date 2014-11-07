@@ -5,6 +5,16 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('ionicApp', ['ionic'])
 
+  .run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    });
+  })
+
   .controller('AppCtrl', function($scope, $ionicModal) {
 
     $scope.onItemDelete = function(item) {
