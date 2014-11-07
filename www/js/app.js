@@ -17,10 +17,6 @@ angular.module('ionicApp', ['ionic'])
 
   .controller('AppCtrl', function($scope, $ionicModal) {
 
-    $scope.onItemDelete = function(item) {
-      $scope.contacts.splice($scope.contacts.indexOf(item), 1);
-    };
-
     $scope.contacts = [{ 
       title: 'You Owe Me Now',
       fullName: 'Cameron Bourke',
@@ -44,6 +40,10 @@ angular.module('ionicApp', ['ionic'])
       u.dollarAmount = '';
       u.description = '';
       $scope.modal.hide();
+    };
+
+    $scope.onItemDelete = function(item) {
+      $scope.contacts.splice($scope.contacts.indexOf(item), 1);
     };
 
   });      
