@@ -25,7 +25,6 @@ angular.module('ionicApp', ['ionic'])
     }]);
 
     $scope.contacts = JSON.parse(localStorage['items']) || [];
-    console.log(window.localStorage['items']);
 
     $scope.createContact = function(u) {     
       $scope.contacts.push({ fullName: u.fullName,
