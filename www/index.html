@@ -34,7 +34,7 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item ng-repeat="contact in contacts" item="item">
+        <ion-item ng-repeat="contact in contacts track by $index" item="item">
           <h1>{{contact.title}}</h1>
           <em>from</em>
           <h3>{{contact.fullName}}</h3>

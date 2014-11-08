@@ -17,18 +17,15 @@ angular.module('ionicApp', ['ionic'])
 
   .controller('AppCtrl', function($scope, $ionicModal) {
 
-    $scope.contacts = [{ 
+    window.localStorage['items'] = JSON.stringify([{ 
       title: 'You Owe Me Now',
       fullName: 'Cameron Bourke',
       dollarAmount: '2',
       description: 'You owe me $2 for downloading this app. Only kidding!! This is just an example of a "Theyo". Delete me now by swiping to the left and enjoy.'
-    }];
+    }]);
 
-    $ionicModal.fromTemplateUrl('templates/addTheyo.html', {
-      scope: $scope
-      }).then(function(modal) {
-      $scope.modal = modal;
-    });
+    $scope.contacts = JSON.parse(localStorage.getItem('items')) || [];
+    console.log(window.localStorage['items']);
 
     $scope.createContact = function(u) {     
       $scope.contacts.push({ fullName: u.fullName,
@@ -45,5 +42,11 @@ angular.module('ionicApp', ['ionic'])
     $scope.onItemDelete = function(item) {
       $scope.contacts.splice($scope.contacts.indexOf(item), 1);
     };
+
+    $ionicModal.fromTemplateUrl('templates/addTheyo.html', {
+     scope: $scope
+      }).then(function(modal) {
+     $scope.modal = modal;
+    });
 
   });      
