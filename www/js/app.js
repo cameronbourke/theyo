@@ -24,7 +24,7 @@ angular.module('ionicApp', ['ionic'])
       description: 'You owe me $2 for downloading this app. Only kidding!! This is just an example of a "Theyo". Delete me now by swiping to the left and enjoy.'
     }]);
 
-    $scope.contacts = JSON.parse(localStorage.getItem('items')) || [];
+    $scope.contacts = JSON.parse(localStorage['items']) || [];
     console.log(window.localStorage['items']);
 
     $scope.createContact = function(u) {     
