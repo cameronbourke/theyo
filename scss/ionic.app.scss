@@ -68,7 +68,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 h1, h2, h3, h4, h5, h6, em, p {
-	font-family: Lato;
+	font-family: Lato, 'Helvetica Neue', sans-serif;
 }
 
 .item-divider-margin {
@@ -84,9 +84,9 @@ h1, h2, h3, h4, h5, h6, em, p {
 }
 
 form {
-	font-family: lato;
+	font-family: Lato, 'Helvetica Neue', sans-serif;
 	input {
-		font-family: lato;
+		font-family: Lato, 'Helvetica Neue', sans-serif;
 	}
 }
 

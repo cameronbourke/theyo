@@ -8957,7 +8957,7 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
     margin-right: 8px; }
 
 h1, h2, h3, h4, h5, h6, em, p {
-  font-family: Lato; }
+  font-family: Lato, 'Helvetica Neue', sans-serif; }
 
 .item-divider-margin {
   margin-top: 20px; }
@@ -8969,9 +8969,9 @@ h1, h2, h3, h4, h5, h6, em, p {
   width: 60%; }
 
 form {
-  font-family: lato; }
+  font-family: Lato, 'Helvetica Neue', sans-serif; }
   form input {
-    font-family: lato; }
+    font-family: Lato, 'Helvetica Neue', sans-serif; }
 
 .btn-plus {
   width: 34px;
